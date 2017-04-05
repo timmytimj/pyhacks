@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import logging
+logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy_ext.igmp import *
 
 def send_v3_report(myint="eth0"):
