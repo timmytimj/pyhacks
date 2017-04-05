@@ -33,7 +33,7 @@ def send_v2_report(myint="eth0"):
     """ My attempt ... --Jocke"""
     a = Ether()
     b = IP()
-    b.src = "1.2.3.4"
+    b.src = "192.168.2.42"
     c = IGMP()
     c.type = 0x16                 # v2 Join
     c.gaddr = "225.1.2.3"
@@ -51,6 +51,11 @@ def send_v2_report(myint="eth0"):
 #test_igmp()
 #test_igmpv3()
 
-send_v3_report()
-send_v2_report()
+#send_v3_report()
+#send_v2_report()
+
+if __name__ == "__main__":
+    interact(mydict=globals(), mybanner="IGMP console")
+
+
 
